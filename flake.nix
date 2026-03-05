@@ -35,7 +35,7 @@
     # determinate -
     # > Determinate
     # https://determinate.systems/nix
-    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
+    determinate.url = "https://flakehub.com/f/determinatesystems/determinate/*";
 
     # ╔═══════════════════════════╗
     # ║ █▄░█ █ ▀▄▀ █▀█ █▄▀ █▀▀ █▀ ║
@@ -150,5 +150,16 @@
     # flakehub.com
     fh.url = "https://flakehub.com/f/determinatesystems/fh/*";
   };
-  outputs = {}: {};
+  outputs = {flake-parts, ...} @ inputs:
+    flake-parts.lib.mkFlake {inherit inputs;} ({...}: {
+      system = [
+        "x86_64-linux"
+        "x86_64-darwin"
+        "aarch64-linux"
+        "aarch64-darwin"
+      ];
+      imports = [
+        (inputs.import-tree ./parts)
+      ];
+    });
 }
