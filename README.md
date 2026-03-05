@@ -37,20 +37,20 @@ wrappers which make programs work
   - has shared 512GB SSD across OSes
   - is hackintosh
   - has macOS Sequoia
-3. **arceus**:
-  - `HONOR X7d`
-  - nix-on-droid phone
-  - has Qualcomm SM6375
-  - has 6GB RAM
-  - has 128GB storage
-  - has android 15
-4. **garchomp**:
+3. **garchomp**:
   - `AORUS 15P KC`
   - nixos-wsl windows laptop
   - has i7-10870H
   - has RTX 3060
   - has 16GB RAM
   - has shared 512GB SSD across OSes
+4. **arceus**:
+  - `HONOR X7d`
+  - nix-on-droid phone
+  - has Qualcomm SM6375
+  - has 6GB RAM
+  - has 128GB storage
+  - has android 15
 
 
 ```
