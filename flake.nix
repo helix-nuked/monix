@@ -76,6 +76,14 @@
     # https://github.com/NixOS/nixos-hardware
     nixos-hardware.url = "https://flakehub.com/f/NixOS/nixos-hardware/*";
 
+    # ╔════════════════════════════════════════════╗
+    # ║ █ █▀▄▀█ █▀█ █▀█ █▀█ ▀█▀ ▄▄ ▀█▀ █▀█ █▀▀ █▀▀ ║
+    # ║ █ █░▀░█ █▀▀ █▄█ █▀▄ ░█░ ░░ ░█░ █▀▄ ██▄ ██▄ ║
+    # ╚════════════════════════════════════════════╝
+    # import-tree -
+    # > Import all nix files in a directory tree.
+    import-tree.url = "github:vic/import-tree";
+
     # ███████╗██╗░░██╗████████╗██████╗░░█████╗░
     # ██╔════╝╚██╗██╔╝╚══██╔══╝██╔══██╗██╔══██╗
     # █████╗░░░╚███╔╝░░░░██║░░░██████╔╝███████║
@@ -101,6 +109,7 @@
     # ╚═══════════════════════════════════╝
     # nixos-wsl -
     # > NixOS on WSL
+    # https://github.com/nix-community/NixOS-WSL
     nixos-wsl = {
       url = "github:nix-community/nixos-wsl/main";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -112,10 +121,34 @@
     # ╚════════════════════════════════════════╝
     # nix-darwin -
     # > A collection of darwin modules
+    # https://nix-darwin.org
     nix-darwin = {
       url = "https://flakehub.com/f/nix-darwin/nix-darwin/0.1";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # ╔════════════════════════════════════════════════════════════════════╗
+    # ║ █▄░█ █ ▀▄▀ ▄▄ █ █▄░█ █▀▄ █▀▀ ▀▄▀ ▄▄ █▀▄ ▄▀█ ▀█▀ ▄▀█ █▄▄ ▄▀█ █▀ █▀▀ ║
+    # ║ █░▀█ █ █░█ ░░ █ █░▀█ █▄▀ ██▄ █░█ ░░ █▄▀ █▀█ ░█░ █▀█ █▄█ █▀█ ▄█ ██▄ ║
+    # ╚════════════════════════════════════════════════════════════════════╝
+    # nix-index-database -
+    # > Weekly updated nix-index database
+    # https://github.com/nix-community/nix-index-database
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    # ╔═════════╗
+    # ║ █▀▀ █░█ ║
+    # ║ █▀░ █▀█ ║
+    # ╚═════════╝
+    # fh -
+    # > The official CLI for FlakeHub:
+    # >   search for flakes,
+    # >   and add new inputs to your Nix flake.
+    # flakehub.com
+    fh.url = "https://flakehub.com/f/determinatesystems/fh/*";
   };
   outputs = {}: {};
 }
