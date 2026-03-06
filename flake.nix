@@ -68,14 +68,6 @@
     # https://github.com/NixOS/nixos-hardware
     nixos-hardware.url = "https://flakehub.com/f/NixOS/nixos-hardware/*";
 
-    # ╔════════════════════════════════════════════╗
-    # ║ █ █▀▄▀█ █▀█ █▀█ █▀█ ▀█▀ ▄▄ ▀█▀ █▀█ █▀▀ █▀▀ ║
-    # ║ █ █░▀░█ █▀▀ █▄█ █▀▄ ░█░ ░░ ░█░ █▀▄ ██▄ ██▄ ║
-    # ╚════════════════════════════════════════════╝
-    # import-tree -
-    # > Import all nix files in a directory tree.
-    import-tree.url = "github:vic/import-tree";
-
     # ███████╗██╗░░██╗████████╗██████╗░░█████╗░
     # ██╔════╝╚██╗██╔╝╚══██╔══╝██╔══██╗██╔══██╗
     # █████╗░░░╚███╔╝░░░░██║░░░██████╔╝███████║
@@ -154,16 +146,6 @@
     ];
     experimental-features = ["nix-command" "flakes" "pipe-operators"];
   };
-  outputs = {flake-parts, ...} @ inputs:
-    flake-parts.lib.mkFlake {inherit inputs;} ({...}: {
-      systems = [
-        "x86_64-linux"
-        "x86_64-darwin"
-        "aarch64-linux"
-        "aarch64-darwin"
-      ];
-      imports = [
-        (inputs.import-tree ./mods)
-      ];
-    });
+  outputs = {self, ...}: {
+  };
 }
