@@ -150,6 +150,18 @@
     # flakehub.com
     fh.url = "https://flakehub.com/f/determinatesystems/fh/*";
   };
+  nixConfig = {
+    eval-cores = 0;
+    cores = 0;
+    extra-substituters = [
+      "https://install.determinate.systems"
+      "https://nix-community.cachix.org"
+    ];
+    extra-trusted-users = [
+      "monyx"
+    ];
+    experimental-features = ["nix-command" "flakes" "pipe-operators"];
+  };
   outputs = {flake-parts, ...} @ inputs:
     flake-parts.lib.mkFlake {inherit inputs;} ({...}: {
       systems = [
