@@ -45,15 +45,7 @@
     # > A collection of packages for the Nix package manager
     # https://status.nixos.org
     nixpkgs.url = "https://flakehub.com/f/NixOS/nixpkgs/0.1";
-
-    # ╔═══════════════════════════════════════════╗
-    # ║ █▀▀ █░░ ▄▀█ █▄▀ █▀▀ ▄▄ █▀█ ▄▀█ █▀█ ▀█▀ █▀ ║
-    # ║ █▀░ █▄▄ █▀█ █░█ ██▄ ░░ █▀▀ █▀█ █▀▄ ░█░ ▄█ ║
-    # ╚═══════════════════════════════════════════╝
-    # flake-parts -
-    # > Flake basics described using the module system
-    # https://flake.parts
-    flake-parts.url = "https://flakehub.com/f/hercules-ci/flake-parts/*";
+    nixpkgs-stable.url = "https://flakehub.com/f/NixOS/nixpkgs/*";
 
     # ╔═════════════════════════════════════════════════════╗
     # ║ █░█ █▀█ █▀▄▀█ █▀▀ ▄▄ █▀▄▀█ ▄▀█ █▄░█ ▄▀█ █▀▀ █▀▀ █▀█ ║

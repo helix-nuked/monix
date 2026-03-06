@@ -52,7 +52,6 @@ wrappers which make programs work
   - has 128GB storage
   - has android 15
 
-
 ```
         .:'
     __ :'__
