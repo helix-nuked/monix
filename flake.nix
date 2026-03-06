@@ -159,7 +159,7 @@
         "aarch64-darwin"
       ];
       imports = [
-        (inputs.import-tree ./parts)
+        (inputs.import-tree ./mods)
       ];
     });
 }
